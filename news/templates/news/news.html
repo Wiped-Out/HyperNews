@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News</title>
+</head>
+ 
+<body>
+     {% extends 'news/newshome.html' %}
+ {% block title %}newspage{% endblock %}
+    {% block content%}
+        <h2>{{ title }}</h2>
+        <p>{{ created }}</p>
+        <p>{{ text }}</p>
+ 
+        <a href='{% url 'home' %}'>Main page</a>
+    {% endblock %}
+</html>
